@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Colorlib Templates">
+<meta name="author" content="Colorlib">
+<meta name="keywords" content="Colorlib Templates">
+
+<title>Au Register Forms by Colorlib</title>
+
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<meta name="robots" content="noindex, follow">
+
+<body>
+
+<h1 style="background-color:darkcyan;text-align:center;margin:auto;color:#8df8bb;font-family: sans-serif;padding:20px">Ro'yxtdan o'gsanlar</h1>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>first_name</th>
+            <th>last_name</th>
+            <th>email</th>
+            <th>company</th>
+            <th>phone</th>
+            <th>exist</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for per in pers %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{per.first_name}}</td>
+            <td>{{per.last_name}}</td>
+            <td>{{per.email}}</td>
+            <td>{{per.company}}</td>
+            <td>{{per.phone}}</td>
+            <td>{{per.exist}}</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+<a href="/" class="button">ortga</a><br>
+</body>
